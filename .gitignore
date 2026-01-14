@@ -1,0 +1,29 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+.venv/
+venv/
+
+# Packaging artifacts
+*.egg-info/
+dist/
+build/
+
+# Pytest cache
+.pytest_cache/
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Simulation outputs
+results.csv
+results/

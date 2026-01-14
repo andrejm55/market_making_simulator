@@ -1,0 +1,33 @@
+[build-system]
+requires = ["hatchling>=1.24.2"]
+build-backend = "hatchling.build"
+
+[project]
+name = "mm-sim"
+version = "0.1.0"
+description = "Toy but insightful market making simulator with Avellaneda–Stoikov quoting and regime comparison."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{name="Your Name"}]
+license = {text="MIT"}
+dependencies = [
+  "numpy>=1.24",
+  "pandas>=2.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=7.4",
+  "ruff>=0.5",
+  "mypy>=1.8",
+]
+
+[project.scripts]
+mm-sim = "mm_sim.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["mm_sim"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
